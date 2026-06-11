@@ -74,7 +74,7 @@ US Treasury yields (3-month, 2-year, 5-year, 10-year) are sourced at monthly fre
 | 5Y–3M Spread | I(1) | I(1) | I(1) | No |
 | 2Y–3M Spread | I(0) | I(1) | Mixed | Partial |
 
----
+--
 
 ## How to Run
 
