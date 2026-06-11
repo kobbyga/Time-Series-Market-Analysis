@@ -18,14 +18,20 @@ This project addresses two related empirical questions:
 ```
 financial-econometrics/
 ├── README.md
+├── Results.md
 ├── financial_econometrics.ipynb     # Main analysis notebook
 ├── data/
 │   ├── financial econometrics.csv   # Exchange rate and price index data
 │   └── interest rates.csv           # US Treasury yields (3M, 2Y, 5Y, 10Y)
 └── images/
-    ├── dvar_forecasts.png
-    ├── arima_forecasts.png
-    ├── forecast_comparison.png
+    ├── dvar_forecasts
+        ├── dvar_de.png
+        ├── dvar_dp1.png
+        ├── dvar_dp2.png
+    ├── arima_forecasts
+        ├── arima_de.png
+        ├── arima_dp1.png
+        ├── arima_dp2.png
     ├── individual_rates_stationarity.png
     └── spreads_stationarity.png
 ```
