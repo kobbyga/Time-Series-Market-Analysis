@@ -1,6 +1,6 @@
 # Financial Econometrics – Time Series Forecasting & Term Structure Analysis
 
-A Python-based empirical study combining multivariate time series forecasting with interest rate term structure analysis. The project applies VAR, ARIMA, and unit root testing frameworks to exchange rates, price indices, and US Treasury yields over a 25-year horizon (2001–2025).
+A Python-based empirical study combining multivariate time series forecasting with interest rate term structure analysis. The project applies VAR, ARIMA, and unit root testing frameworks to exchange rates, price indices, and US Treasury yields over a 25 year horizon (2001–2025).
 
 ---
 
@@ -8,7 +8,7 @@ A Python-based empirical study combining multivariate time series forecasting wi
 
 This project addresses two related empirical questions:
 
-1. **Forecasting:** Which model — a differenced VAR (DVAR) or univariate ARIMA — produces more accurate out-of-sample forecasts for exchange rate and price dynamics?
+1. **Forecasting:** Which model (a differenced VAR (DVAR) or univariate ARIMA) produces more accurate out of sample forecasts for exchange rate and price dynamics?
 2. **Term Structure:** Do US Treasury yield spreads exhibit stationarity, and what does this imply for the Expectations Hypothesis (EH) of the yield curve?
 
 ---
@@ -42,11 +42,11 @@ financial-econometrics/
 
 ### Part 1 — DVAR Forecasting
 
-A differenced Vector Autoregression (DVAR) model is estimated on monthly first differences of exchange rate (Δe), US price index (Δp1), and UK price index (Δp2) from January 2001 to December 2022. Lag order p = 2 is imposed from prior analysis. The fitted model generates 36-month out-of-sample forecasts covering 2023–2025, evaluated against realised values.
+A differenced Vector Autoregression (DVAR) model is estimated on monthly first differences of exchange rate (Δe), US price index (Δp1), and UK price index (Δp2) from January 2001 to December 2022. Lag order p = 2 is imposed from prior analysis. The fitted model generates 36 month out of sample forecasts covering 2023–2025, evaluated against realised values.
 
 ### Part 2 — Univariate ARIMA Models (`UnivariateForecastingTask`)
 
-A class-based ARIMA framework fits separate models to each of the three variables. Model order selection is automated via AIC grid search over ARIMA(p, 0, q) for p, q ∈ {0, 1, 2, 3}, with d = 0 applied since all series are already first-differenced. For each variable, the notebook produces ACF/PACF diagnostics, in-sample fit statistics, and 36-month forecasts with 95% confidence intervals.
+A class based ARIMA framework fits separate models to each of the three variables. Model order selection is automated via AIC grid search over ARIMA(p, 0, q) for p, q ∈ {0, 1, 2, 3}, with d = 0 applied since all series are already first differenced. For each variable, the notebook produces ACF/PACF diagnostics, in sample fit statistics, and 36 month forecasts with 95% confidence intervals.
 
 ### Part 3 — Forecast Comparison & Diebold–Mariano Test (`ForecastComparisonTask`)
 
@@ -91,11 +91,11 @@ Place the data files in the same directory as the notebook (or update the `path`
 
 ## Potential Extensions
 
-- **Johansen cointegration test** to formally determine the number of cointegrating vectors among the yield series, as a natural follow-on to the unit root results
+- **Johansen cointegration test** to formally determine the number of cointegrating vectors among the yield series, as a natural follow on to the unit root results
 - **Granger causality testing** to assess whether yield spreads predict future short rate movements, directly testing a core implication of the Expectations Hypothesis
 - **VECM (Vector Error Correction Model)** to exploit any identified cointegrating relationships in the forecasting framework
 - **Rolling window estimation** to test parameter stability and assess whether DVAR vs ARIMA performance varies across macroeconomic regimes
-- **GARCH extensions** to account for time-varying volatility in exchange rate and price dynamics
+- **GARCH extensions** to account for time varying volatility in exchange rate and price dynamics
 
 ---
 
