@@ -56,8 +56,6 @@ DVAR and ARIMA forecasts are compared using MAE and RMSE computed at four foreca
 
 US Treasury yields (3-month, 2-year, 5-year, 10-year) are sourced at monthly frequency from January 2001 to February 2026. Three term structure spreads are constructed (10Y–3M, 5Y–3M, 2Y–3M) and tested for stationarity using both the **Augmented Dickey–Fuller (ADF)** and **KPSS** tests in combination. Stationarity of the spread series is interpreted as evidence of cointegration between long and short rates, which is a necessary condition for the Expectations Hypothesis to hold.
 
---
-
 ## How to Run
 
 **Requirements:** Python 3.8+
